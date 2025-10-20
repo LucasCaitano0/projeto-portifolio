@@ -114,6 +114,10 @@ section#detalhes{
   grid-column: 2;
 }
 
+section#detalhes h2{
+  color: var(--destaque);
+}
+
 article{
   background-color: var(--fundo-card);
   padding: 20px;
