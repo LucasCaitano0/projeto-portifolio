@@ -233,23 +233,20 @@ article h2{
   border-radius: 8px;
 }
 
-footer{
-  background-color: var(--destaque);
-  color: var(--texto-inverso);
-  text-align: center;
-  padding: 15px;
-}
-
-footer a{
-  color: var(--texto-inverso);
+/* Thumb do projeto usando background-image (link cobrindo todo o espaço) */
+#projeto-container .thumb-projeto{
+  display: block;
+  width: 100%;
+  aspect-ratio: 16/9;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 8px;
+  overflow: hidden;
   text-decoration: none;
-  font-weight: bold;
 }
 
-footer a:hover{
-  color: var(--destaque-inverso);
-}
-
+/* Ajuste em telas maiores (mesma lógica aplicada a .foto no media query) */
 @media screen and (min-width: 768px) {
   #skill-container {
     grid-template-columns: 1fr 1fr;
@@ -270,4 +267,26 @@ footer a:hover{
     max-height: 200px;
   }
 
+  #projeto-container .thumb-projeto{
+    aspect-ratio: 1/1;
+    max-width: 20%;
+    max-height: 200px;
+  }
+}
+
+footer{
+  background-color: var(--destaque);
+  color: var(--texto-inverso);
+  text-align: center;
+  padding: 15px;
+}
+
+footer a{
+  color: var(--texto-inverso);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:hover{
+  color: var(--destaque-inverso);
 }
